@@ -1,2 +1,2 @@
-# startup-profit-prediction
-Profit prediction for start up companies
+# salary_prediction
+Salary Prediction

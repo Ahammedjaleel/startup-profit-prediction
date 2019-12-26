@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<style>
+body {background-color: Lavender ;}
+h1   {color: DarkBlue;}
+h3   {color: FireBrick   ;}
+p    {color: red;}
+</style>
+<body>
+ <div class="login">
+	<h1>Predict Profit for Startup</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+	
+	<h3>Enter 1 to select the State  </h3>
+    	
+		California
+		<input id="California" type="text" name="California" placeholder="California"  required="required" value =0 /> 
+		Florida
+		<input id="Florida" type="text" name="Florida" placeholder="Florida" required="required" value =0 />
+		New york
+		<input id="Newyork" type="text" name="Newyork" placeholder="Newyork" required="required" value = 0 />
+		<br>
+		<br>
+		<br>
+		<input type="text" name="R&D Spent" placeholder="R&D Expence" required="required" />
+        <input type="text" name="Administration Expence" placeholder="Administration Expence" required="required" />
+		<input type="text" name="Marketing Expence" placeholder="Marketing Expence" required="required" />	
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
