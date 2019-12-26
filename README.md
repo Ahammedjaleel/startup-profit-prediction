@@ -1,2 +1,2 @@
-# salary_prediction
-Salary Prediction
+# startup_prediction
+Startup Prediction
