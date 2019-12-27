@@ -10,7 +10,7 @@ from flask import Flask,request,jsonify,render_template
 import pickle
 
 app = Flask(__name__)
-salary_deploy = pickle.load(open('Startup_prediction.pkl','rb'))
+salary_deploy = pickle.load(open('startup_prediction.pkl','rb'))
 
 @app.route('/')
 def home():
